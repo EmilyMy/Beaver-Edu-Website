@@ -1,0 +1,123 @@
+.navBar{
+    background-color: rgb(246, 246, 246);
+    height: 70px;
+    /* padding-top: 5px; */
+    padding: 8px 10% 10px;
+    /* padding-bottom: 10px;
+    padding-left: 10%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px  rgb(196, 196, 196);
+    position: sticky;
+    top: 0;
+    /* width: 100%; */
+    /* max-width: inherit; */
+    z-index: 1000;
+    object-fit: contain;
+}
+.header {
+    height:70px;
+    display: flex;
+    align-items: center;
+}
+
+.header a.companyName {
+    width:max-content;
+    align-self: center;
+    max-height: 100%;
+    object-fit: contain;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    /* background-color: gold; */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: black;
+}
+
+.header img {
+    max-height: 100%;
+    object-fit: contain;
+    /* background-color: blueviolet; */
+    display: block;
+    float: left; 
+    
+}
+
+/* .menu {
+    position: absolute;
+    right: 20%;
+} */
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* object-fit: contain; */
+    /* background-color: bisque; */
+}
+
+#menu li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+#menu li a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+#menu li a:hover {
+    color:rgb(159, 239, 181);
+}
+
+#menu li a.active {
+    color:rgb(239, 168, 156);
+}
+
+#mobile {
+    display: none;
+    /* right: 20%;
+    position: absolute; */
+}
+
+#mobile i {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width:700px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        /* object-fit: contain; */
+        right: -300px;
+        top: 93px;
+        width: 100px;
+        height: 100vh;
+        background:rgb(246, 212, 212);
+        padding: 20px 100px 0 20px;
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+    }
+    #menu.active {
+        right: 0;
+    }
+    .navBar ul li {
+        margin-bottom: 20px;
+    }
+    #mobile {
+        display: block;
+    }
+    #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
